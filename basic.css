@@ -1,0 +1,279 @@
+/*全局css*/
+
+:root {
+    --main: #719fe3;
+    --main-hover: #96bbf1;
+    --main-active: #4c7dd6;
+    --main-bg: #1c1c1c;
+    --main-color: #ffffff;
+    --right-bg: #2525258f;
+    --right-hover: #00000040;
+    --right-shadow: #000000b3;
+    --scroll-bg: #2b2b2b;
+    --scroll-line-bg: #575757;
+    --head-bg: #1c1c1c7d;
+    --head-shadow: #0a0a0abd;
+    --card-bg: #292929;
+    --card-shadow: #111111;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--scroll-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: var(--scroll-line-bg);
+}
+
+::selection {
+    background-color: var(--main-active);
+    color: var(--main-bg);
+}
+
+body {
+    margin: 0;
+    background-color: var(--main-bg);
+	overflow: hidden;
+}
+
+* {
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+}
+
+a {
+    text-decoration: none;
+    font-size: 18px;
+    transition-duration: 0.2s;
+}
+
+p,
+h3 {
+    color: var(--main-color);
+    text-align: center;
+}
+
+p.title {
+    font-size: 3em;
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+}
+
+/*导航栏*/
+
+div.head {
+    background-color: var(--head-bg);
+    color: var(--main);
+    width: 100%;
+    height: 75px;
+    box-shadow: 0px 2px 15px 0px var(--head-shadow);
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /*Safari*/
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.head>div div {
+    padding: 0 10px;
+    float: left;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+/*导航栏链接*/
+div.head a:link {
+    color: var(--main);
+}
+
+div.head a:visited {
+    color: var(--main);
+}
+
+div.head a:hover {
+    color: var(--main-hover);
+}
+
+div.head a:active {
+    color: var(--main-active);
+}
+
+/*左边栏*/
+div.head>div#left {
+    display: flex;
+}
+
+div#icon {
+    display: flex;
+}
+
+div#icon>img {
+    width: auto;
+    height: 65px;
+}
+
+/*右边栏*/
+div.head>div#right {
+    display: flex;
+    align-items: center;
+}
+
+div#time {
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+    height: 20px;
+    right: 10px;
+    transition-duration: 0.2s;
+    overflow: hidden;
+    font-size: 18px;
+    text-align: center;
+}
+
+div#time:hover {
+    height: 48px;
+}
+
+div#time>p {
+    margin: 0 5px;
+	font-family: consolas;
+}
+
+img[src="https://m.xiguacity.cn/post/6042be99fef5f8753d6c03c1/b60fa262-cfc1-406d-814c-2ffaf63baaf0.svg"],
+img[src="https://m.xiguacity.cn/post/6042be99fef5f8753d6c03c1/5c2cac44-609e-490e-ade0-78db98454575.svg"],
+img[src="https://m.xiguacity.cn/post/6042be99fef5f8753d6c03c1/bfb1f419-05e8-45bd-ab38-4e79d6b40e04.svg"] {
+    height: 30px;
+    margin-right: 5px;
+}
+
+div#top {
+    width: 100%;
+    height: 75px;
+    top: 0;
+}
+
+/*右键菜单*/
+
+ul.rightMouse {
+    border-radius: 10px;
+    width: 140px;
+    height: max-content;
+    background-color: var(--right-bg);
+    font-size: 10px;
+    list-style: none;
+    line-height: 35px;
+    position: fixed;
+    display: none;
+    padding-left: 0;
+    margin: 0;
+    transition-duration: 0.2s;
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    box-shadow: 0 0 25px 0px var(--right-shadow);
+    color: var(--main-color);
+}
+
+ul.rightMouse>li {
+    padding: 0 15px;
+    margin: 5px;
+    border-radius: 5px;
+    transition-duration: 0.2s;
+}
+
+ul.rightMouse>li:hover {
+	background-color: var(--right-hover);
+}
+
+/*底部信息*/
+
+div#bottom {
+    width: 100%;
+    height: 150px;
+    background-color: var(--main);
+    bottom: 0;
+    margin-top: 3em;
+    color: #ffffff;
+}
+
+/*底部链接*/
+div#bottom>div#A {
+    text-align: center;
+    padding: 20px;
+}
+
+div#bottom>div#A>a {
+    color: #ffffff;
+    font-size: 16px;
+    margin: 5px;
+}
+
+div#bottom>div#A>a:active {
+    font-size: 15px;
+}
+
+/*
+关于页面css
+https://qixie.rth1.me/Slouchwind/about
+*/
+
+div#user {
+    margin: auto;
+    text-align: center;
+}
+
+img.userImg {
+    border-radius: 50%;
+    width: 25%;
+    margin: 3em;
+}
+
+/*
+项目页面css
+https://qixie.rth1.me/Slouchwind/editor
+*/
+
+div#editor {
+    margin: auto;
+    width: max-content;
+    height: 310px;
+}
+
+div.card {
+    border-radius: 32.5px;
+    background-color: var(--card-bg);
+    box-shadow: 0 0 15px var(--card-shadow);
+    margin: 15px 10px;
+    transition-duration: 0.3s;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: stretch;
+    float: left;
+    width: 65px;
+    height: 310px;
+}
+
+div.card:hover {
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 0 20px 5px var(--card-shadow);
+}
+
+div.card>p {
+    margin: 10px auto;
+}
+
+div.card>img {
+    height: 190px;
+}
