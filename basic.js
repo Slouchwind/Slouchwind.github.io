@@ -306,10 +306,17 @@ function unlinedScrollY(doneY, speed = 2) {
 
 /*主要代码*/
 
-//去除网址.html的后缀
-if (location.href.indexOf(".html") != "-1") {
-	location.href = location.href.slice(0, location.href.indexOf(".html"));
+if (location.hostname.includes("vercel.app")) {
+	if (!(location.href.includes(".html"))) {
+		location.href += ".html";
+	}
 }
+else {
+	if (location.href.includes(".html")) {
+		location.href = location.href.slice(0, location.href.indexOf(".html"));
+	}
+}
+
 //页面加载完成后执行
 window.onload = function () {
 	localStorage.color = localStorage.color || 3;
