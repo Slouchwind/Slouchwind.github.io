@@ -97,6 +97,17 @@ function rightMouse() {
     }
 }
 
+if (location.hostname.includes("vercel.app")) {
+    if (!(location.href.includes(".html"))) {
+        location.href += ".html";
+    }
+}
+else {
+    if (location.href.includes(".html")) {
+        location.href = location.href.slice(0, location.href.indexOf(".html"));
+    }
+}
+
 window.onload = () => {
     rightMouse();
 }
