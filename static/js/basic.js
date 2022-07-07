@@ -98,7 +98,7 @@ function rightMouse() {
 }
 
 if (location.hostname.includes("vercel.app")) {
-    if (!(location.href.includes(".html"))) {
+    if (!(location.href.includes(".html")) && location.pathname != "/") {
         location.href += ".html";
     }
 }
