@@ -151,18 +151,13 @@ function log() {
         basicCss, colorCss, basicCss, colorCss
     );
 }
+if (!(location.hostname.includes("vercel.app"))) {
+    if (location.href.includes(".html")) {
+        location.href = location.href.slice(0, location.href.indexOf(".html"));
+    }
+}
 
 window.onload = () => {
     log();
     rightMouse();
-    if (location.hostname.includes("vercel.app")) {
-        if (!(location.href.includes(".html")) && location.pathname != "/") {
-            location.href += ".html";
-        }
-    }
-    else {
-        if (location.href.includes(".html")) {
-            location.href = location.href.slice(0, location.href.indexOf(".html"));
-        }
-    }
 }
